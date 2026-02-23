@@ -1,16 +1,21 @@
 # Neovim Configuration - Essential Plugins
 
-This document describes each essential plugin in this Neovim configuration and its exact purpose.
+This document describes each essential plugin in my Neovim configuration and its exact purpose.
+
+## Requirements
+
+- Neovim 0.9+
+- Node.js
+- Python
+- lazygit
+- Tree-sitter CLI
+- cpp build essentials
 
 ## Table of Contents
 
 - [Plugin Manager](#plugin-manager)
 - [Essentials](#essentials)
-- [User Interface](#user-interface)
-- [File Navigation](#file-navigation)
-- [Development Tools](#development-tools)
-- [Git Integration](#git-integration)
-- [Themes](#themes)
+- [Others](#Others)
 
 ---
 
@@ -167,12 +172,3 @@ This document describes each essential plugin in this Neovim configuration and i
 
 - **Repository**: `folke/tokyonight.nvim`
 - **Purpose**: Tokyo Night color scheme. (configured but not set as default)
-
-## Requirements
-
-- Neovim 0.9+
-- Node.js
-- Python
-- lazygit
-- Tree-sitter CLI
-- cpp build essentials
