@@ -12,4 +12,4 @@ vim.o.signcolumn = "yes"
 -- others
 vim.o.clipboard = "unnamedplus" -- copying to clipboard
 vim.o.winborder = "rounded" -- boarder for floating window
-vim.o.directory = "~/.local/state/nvim/swap//"
+vim.o.swapfile = false
