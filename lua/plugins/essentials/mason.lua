@@ -17,6 +17,7 @@ return {
 				"prismals",
 				"pyright",
 				"clangd",
+				"sqlls",
 			},
 		},
 		dependencies = {
@@ -41,10 +42,12 @@ return {
 			-- list of formatter for mason to install
 			ensure_installed = {
 				"prettier", -- prettier formatter
+				"prettierd", -- prettier formatter
 				"stylua", -- lua formatter
 				"clang-format", -- cpp formatter
 				"isort", -- python formatter
 				"black", -- python formatter
+				"pgformatter", -- sql formatter
 				"pylint", -- python linter
 				"eslint_d", -- eslint linter
 			},
