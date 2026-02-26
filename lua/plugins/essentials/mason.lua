@@ -41,8 +41,9 @@ return {
 		opts = {
 			-- list of formatter for mason to install
 			ensure_installed = {
-				"prettier", -- prettier formatter
-				"prettierd", -- prettier formatter
+				"prettier", -- ts/js formatter
+				"prettierd", -- like prettier but faster
+				"biome", --  like prettierd but faster
 				"stylua", -- lua formatter
 				"clang-format", -- cpp formatter
 				"isort", -- python formatter
