@@ -1,6 +1,6 @@
 # Neovim Configuration - Essential Plugins
 
-This document describes each essential plugin in my Neovim configuration and its exact purpose.
+- This document describes each essential plugin in my Neovim configuration and its exact purpose.
 
 ## Requirements
 
