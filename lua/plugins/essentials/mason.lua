@@ -18,6 +18,7 @@ return {
 				"pyright",
 				"clangd",
 				"sqlls",
+				"tinymist",
 			},
 		},
 		dependencies = {
@@ -48,7 +49,7 @@ return {
 				"clang-format", -- cpp formatter
 				"isort", -- python formatter
 				"black", -- python formatter
-				"pgformatter", -- sql formatter
+				"prettypst", -- typst
 				"pylint", -- python linter
 				"eslint_d", -- eslint linter
 			},

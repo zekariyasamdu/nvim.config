@@ -21,7 +21,7 @@ return {
 				lua = { "stylua" },
 				python = { "isort", "black" },
 				cpp = { "clang-format" },
-				sql = { "pgformatter" },
+				typst = { "prettypst" },
 			},
 			format_on_save = {
 				lsp_fallback = false,
