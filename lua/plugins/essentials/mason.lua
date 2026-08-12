@@ -19,6 +19,7 @@ return {
 				"clangd",
 				"sqlls",
 				"tinymist",
+				"intelephense",
 			},
 		},
 		dependencies = {
@@ -49,9 +50,12 @@ return {
 				"clang-format", -- cpp formatter
 				"isort", -- python formatter
 				"black", -- python formatter
+				"php-cs-fixer", --php formatter
+				"phpstan", --php linter
 				"prettypst", -- typst
 				"pylint", -- python linter
 				"eslint_d", -- eslint linter
+				"terraform-ls",
 			},
 		},
 		dependencies = {

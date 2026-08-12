@@ -22,9 +22,10 @@ return {
 				python = { "isort", "black" },
 				cpp = { "clang-format" },
 				typst = { "prettypst" },
+				php = { "php_cs_fixer" },
 			},
 			format_on_save = {
-				lsp_fallback = false,
+				lsp_fallback = true,
 				async = false,
 				timeout_ms = 999999,
 			},
