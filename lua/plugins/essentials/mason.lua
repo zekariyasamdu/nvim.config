@@ -57,6 +57,7 @@ return {
 				"eslint_d", -- eslint linter
 				"terraform-ls",
 				"gh-actions-language-server",
+				"docker-language-server",
 			},
 		},
 		dependencies = {
