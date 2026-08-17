@@ -56,6 +56,7 @@ return {
 				"pylint", -- python linter
 				"eslint_d", -- eslint linter
 				"terraform-ls",
+				"gh-actions-language-server",
 			},
 		},
 		dependencies = {
