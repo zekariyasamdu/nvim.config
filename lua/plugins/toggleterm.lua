@@ -3,13 +3,13 @@ return {
 	version = "*",
 	config = function()
 		require("toggleterm").setup({
-			size = 15,
 			open_mapping = [[<c-\>]],
 			shade_terminals = true,
-			direction = "float",
+			direction = "tab",
 			float_opts = {
 				border = "rounded",
 			},
 		})
+		vim.keymap.set("t", "<Esc>", [[<C-\><C-n>]])
 	end,
 }

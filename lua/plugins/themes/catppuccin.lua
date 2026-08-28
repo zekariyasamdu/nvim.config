@@ -5,7 +5,7 @@ return {
 	config = function()
 		require("catppuccin").setup({
 			float = {
-				transparent = true, -- enable transparent floating windows
+				transparent = false, -- enable transparent floating windows
 				solid = true, -- use solid styling for floating windows, see |winborder|
 			},
 		})
