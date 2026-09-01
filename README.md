@@ -4,7 +4,7 @@
 
 ## Requirements
 
-- Neovim v0.9 - v0.11.3
+- Neovim v0.12.5
 - Node.js
 - Python
 - lazygit
