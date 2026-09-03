@@ -20,7 +20,7 @@ vim.o.splitbelow = true
 vim.o.splitright = true
 vim.o.cmdheight = 0
 
-vim.opt.clipboard:append("unnamedplus")
+vim.opt.clipboard = "unnamedplus"
 vim.opt.isfname:append("@-@")
 vim.o.winborder = "rounded" 
 

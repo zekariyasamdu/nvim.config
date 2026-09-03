@@ -20,9 +20,9 @@
 
 ## Plugin Manager
 
-### lazy.nvim
+### Pack
 
-- **Repository**: `folke/lazy.nvim`
+- **Repository**: `built in`
 - **Purpose**: Plugin manager for Neovim. Handles installation, updating, and loading of all plugins.
 
 ---

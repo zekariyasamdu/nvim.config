@@ -1,3 +1,4 @@
+--Pack
 vim.api.nvim_create_user_command("PackAdd", function(opts)
   vim.pack.add(opts.fargs)
 end, {
@@ -31,20 +32,21 @@ end, {
   desc = "Update all plugins or specific ones",
 })
 
+-- Treessiter
+-- :InspectTree
+vim.api.nvim_create_user_command("TSActive", function()
+    vim.notify(vim.treesitter.get_parser():lang())
+  end, {
+  desc = "Show active parser",
+})
 
-vim.api.nvim_create_user_command("PackCheck", function()
-  local non_active = vim.iter(vim.pack.get())
-    :filter(function(x) return not x.active end)
-    :map(function(x) return x.spec.name end)
-    :totable()
+vim.api.nvim_create_user_command("TSStop", function()
+    vim.treesitter.stop()
+  end, {
+  desc = "Deactivate Treesitter",
+})
 
-  if #non_active == 0 then
-    vim.notify("OK No non-active plugins found!", vim.log.levels.INFO)
-    return
-  end
-
-  vim.notify(
-    "Non-active plugins: " .. table.concat(non_active, ", "),
-    vim.log.levels.WARN
-  )
-end, {})
+-- lsp 
+vim.api.nvim_create_user_command("LspInfo", "checkhealth vim.lsp", {
+  desc = "Show native Neovim 0.12 LSP status and health check",
+})

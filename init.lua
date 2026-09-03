@@ -1,6 +1,8 @@
 require('vim._core.ui2').enable({})
+
 require("options")
 require("keymaps")
-require("pack")
 require("commands")
 
+require("pack") -- plugins
+require("lsp.lsp") -- lsp collections
