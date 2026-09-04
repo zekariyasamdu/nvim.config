@@ -28,7 +28,19 @@ vim.pack.add({
 	"https://github.com/nvim-mini/mini.nvim",
 	"https://github.com/stevearc/oil.nvim",
 	"https://github.com/akinsho/toggleterm.nvim",
+	"https://github.com/rmagatti/auto-session",
+	"https://github.com/windwp/nvim-ts-autotag",
+	"https://github.com/lukas-reineke/indent-blankline.nvim",
 })
+
+-- lsp
+require("config.lsp")
+-- completion
+require("config.completion")
+-- formaters
+require("config.formater")
+-- lint
+require("config.lint")
 
 -- nvim-treesitter/nvim-treesitter
 require("nvim-treesitter").install({
@@ -47,18 +59,10 @@ require("nvim-treesitter").install({
 	"python",
 	"go",
 })
+
 -- vague-theme/vague.nvim
 require("vague").setup()
 vim.cmd.colorscheme("vague")
-
--- lsp
-require("config.lsp")
--- completion
-require("config.completion")
--- formaters
-require("config.formater")
--- lint
-require("config.lint")
 
 -- nvim-mini
 require("mini.icons").setup()
@@ -99,4 +103,36 @@ require("toggleterm").setup({
 		border = "rounded",
 	},
 })
-vim.keymap.set("t", "<Esc>", [[<C-\><C-n>]])
+-- vim.keymap.set("t", "<Esc>", [[<C-\><C-n>]])
+
+-- nvim-ts-autotag
+require("nvim-ts-autotag").setup({
+	opts = {
+		enable_close = true, -- Auto close tags
+		enable_rename = true, -- Auto rename pairs of tags
+		enable_close_on_slash = false, -- Auto close on trailing </
+	},
+})
+
+-- Auto-session
+require("auto-session").setup({
+	auto_restore_enabled = false,
+	auto_session_suppress_dirs = { "~/", "~/Dev/", "~/Downloads", "~/Documents", "~/Desktop/" },
+})
+
+vim.keymap.set("n", "<leader>sr", "<cmd>AutoSession restore<CR>", { desc = "Restore session for cwd" }) -- restore last workspace session for current directory
+vim.keymap.set("n", "<leader>ss", "<cmd>AutoSession save<CR>", { desc = "Save session for auto session root dir" }) -- save workspace session for current working directory
+
+-- Indent-blankline
+local highlight = {
+	"CursorColumn",
+	"Whitespace",
+}
+require("ibl").setup({
+	indent = { highlight = highlight, char = "" },
+	whitespace = {
+		highlight = highlight,
+		remove_blankline_trail = false,
+	},
+	scope = { enabled = false },
+})
