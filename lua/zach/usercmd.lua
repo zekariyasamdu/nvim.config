@@ -1,5 +1,0 @@
-vim.api.nvim_create_user_command("NvimConfig", "cd ~/.config/nvim", {})
-vim.api.nvim_create_user_command("AlaConfig", "cd ~/.config/alacritty", {})
---vim.api.nvim_create_user_command("WezConfig", "cd ~/.config/wezterm", {})
-vim.api.nvim_create_user_command("TmuConfig", "cd ~/.config/tmux", {})
-vim.api.nvim_create_user_command("ZelConfig", "cd ~/.config/zellij", {})

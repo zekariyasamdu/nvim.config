@@ -1,10 +1,6 @@
--- Customs
- require("zach.globals")
- require("zach.options")
- require("zach.keymaps")
- require("zach.usercmd")
- require("zach.autocmd")
--- Package manager
- require("config.lazy")
--- lsp collections
- require("lsp.lsp")
+require("vim._core.ui2").enable({})
+
+require("options")
+require("keymaps")
+require("commands")
+require("pack") -- plugins
