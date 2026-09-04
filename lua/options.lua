@@ -5,12 +5,12 @@ vim.o.relativenumber = true
 vim.o.termguicolors = true
 vim.o.signcolumn = "yes"
 
-vim.o.tabstop = 2 
-vim.o.shiftwidth = 2 
-vim.o.expandtab = true 
-  
+vim.o.tabstop = 2
+vim.o.shiftwidth = 2
+vim.o.expandtab = true
+
 vim.o.wrap = false
-vim.o.autoindent = true 
+vim.o.autoindent = true
 vim.o.inccommand = "split"
 vim.o.ignorecase = true
 vim.o.smartcase = true
@@ -22,7 +22,7 @@ vim.o.cmdheight = 0
 
 vim.opt.clipboard = "unnamedplus"
 vim.opt.isfname:append("@-@")
-vim.o.winborder = "rounded" 
+vim.o.winborder = "rounded"
 
 vim.o.swapfile = false
 vim.o.backup = false
@@ -35,4 +35,3 @@ vim.api.nvim_create_autocmd("TextYankPost", {
     vim.hl.on_yank()
   end,
 })
-

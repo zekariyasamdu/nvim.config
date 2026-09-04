@@ -35,18 +35,18 @@ end, {
 -- Treessiter
 -- :InspectTree
 vim.api.nvim_create_user_command("TSActive", function()
-    vim.notify(vim.treesitter.get_parser():lang())
-  end, {
+  vim.notify(vim.treesitter.get_parser():lang())
+end, {
   desc = "Show active parser",
 })
 
 vim.api.nvim_create_user_command("TSStop", function()
-    vim.treesitter.stop()
-  end, {
+  vim.treesitter.stop()
+end, {
   desc = "Deactivate Treesitter",
 })
 
--- lsp 
+-- lsp
 vim.api.nvim_create_user_command("LspInfo", "checkhealth vim.lsp", {
   desc = "Show native Neovim 0.12 LSP status and health check",
 })
