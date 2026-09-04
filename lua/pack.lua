@@ -31,6 +31,7 @@ vim.pack.add({
 	"https://github.com/rmagatti/auto-session",
 	"https://github.com/windwp/nvim-ts-autotag",
 	"https://github.com/lukas-reineke/indent-blankline.nvim",
+	"https://github.com/github/copilot.vim",
 })
 
 -- lsp
@@ -136,3 +137,7 @@ require("ibl").setup({
 	},
 	scope = { enabled = false },
 })
+
+-- copilot
+vim.g.copilot_no_tab_map = true
+vim.api.nvim_set_keymap("i", "<C-A>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
