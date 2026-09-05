@@ -19,6 +19,8 @@ vim.pack.add({
 	"https://github.com/L3MON4D3/LuaSnip", -- snippet engine
 	"https://github.com/rafamadriz/friendly-snippets", -- huge collection of pre-made snippets.
 	"https://github.com/onsails/lspkind.nvim", -- visual decoration.
+	"https://github.com/onsails/lspkind.nvim", -- visual decoration.
+	"https://github.com/f3fora/cmp-spell", -- spell check
 	-- Formaters
 	"https://github.com/stevearc/conform.nvim",
 	-- Lint

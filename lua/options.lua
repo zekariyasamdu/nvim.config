@@ -29,9 +29,13 @@ vim.o.backup = false
 vim.o.undofile = true
 vim.o.undodir = vim.fn.stdpath("data") .. "/undodir"
 
+-- spelling
+vim.opt.spell = true
+vim.opt.spelllang = { "en_us" }
+
 vim.api.nvim_create_autocmd("TextYankPost", {
-  desc = "Yellow line when yanking.",
-  callback = function()
-    vim.hl.on_yank()
-  end,
+	desc = "Yellow line when yanking.",
+	callback = function()
+		vim.hl.on_yank()
+	end,
 })

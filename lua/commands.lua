@@ -1,52 +1,63 @@
 --Pack
 vim.api.nvim_create_user_command("PackAdd", function(opts)
-  vim.pack.add(opts.fargs)
+	vim.pack.add(opts.fargs)
 end, {
-  nargs = "+",
-  desc = "Add plugins (:PackAdd user/repo1 user/repo2)",
+	nargs = "+",
+	desc = "Add plugins (:PackAdd user/repo1 user/repo2)",
 })
 
 vim.api.nvim_create_user_command("PackDel", function(opts)
-  vim.pack.del(opts.fargs)
+	vim.pack.del(opts.fargs)
 end, {
-  nargs = "+",
-  desc = "Delete plugins (:PackDel plugin1 plugin2)",
+	nargs = "+",
+	desc = "Delete plugins (:PackDel plugin1 plugin2)",
 })
 
 vim.api.nvim_create_user_command("PackUpdate", function(opts)
-  -- checks if any argument is passed
-  if opts.args:match("%S") then
-    -- update specific plugins
-    local plugins = vim.split(opts.args, "%s+", {
-      trimempty = true,
-    })
+	-- checks if any argument is passed
+	if opts.args:match("%S") then
+		-- update specific plugins
+		local plugins = vim.split(opts.args, "%s+", {
+			trimempty = true,
+		})
 
-    -- update only specified plugins
-    vim.pack.update(plugins)
-  else
-    -- update all
-    vim.pack.update()
-  end
+		-- update only specified plugins
+		vim.pack.update(plugins)
+	else
+		-- update all
+		vim.pack.update()
+	end
 end, {
-  nargs = "*",
-  desc = "Update all plugins or specific ones",
+	nargs = "*",
+	desc = "Update all plugins or specific ones",
 })
 
 -- Treessiter
 -- :InspectTree
 vim.api.nvim_create_user_command("TSActive", function()
-  vim.notify(vim.treesitter.get_parser():lang())
+	vim.notify(vim.treesitter.get_parser():lang())
 end, {
-  desc = "Show active parser",
+	desc = "Show active parser",
 })
 
 vim.api.nvim_create_user_command("TSStop", function()
-  vim.treesitter.stop()
+	vim.treesitter.stop()
 end, {
-  desc = "Deactivate Treesitter",
+	desc = "Deactivate Treesitter",
 })
 
 -- lsp
 vim.api.nvim_create_user_command("LspInfo", "checkhealth vim.lsp", {
-  desc = "Show native Neovim 0.12 LSP status and health check",
+	desc = "Show native Neovim 0.12 LSP status and health check",
+})
+
+--others
+vim.api.nvim_create_user_command("Unsaved", function()
+	for _, b in ipairs(vim.api.nvim_list_bufs()) do
+		if vim.bo[b].modified then
+			print(b, vim.api.nvim_buf_get_name(b))
+		end
+	end
+end, {
+	desc = "show unsaved budders",
 })
